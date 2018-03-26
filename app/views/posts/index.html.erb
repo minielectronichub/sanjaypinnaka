@@ -1,0 +1,11 @@
+
+<% @post.each do |post| %>
+ <%= link_to (image_tag post.image.url(:medium)),post %>
+
+ <h3><%= link_to post.title,post %></h3>
+ <p><%= post.comments.count %> comments</p>
+ <P>Likes:<%= post.get_likes.size %></P>
+<% end %>
+
+
+<%= link_to "add new post", new_post_path %>

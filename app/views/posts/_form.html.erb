@@ -1,0 +1,10 @@
+
+
+<%= simple_form_for @post do |f| %>
+  <%= f.input :image, as: :file %>
+ 
+  <%= f.input :title %>
+  <%= f.input :link %>
+  <%= f.input :description %>
+  <%= f.button :submit %>
+<% end %>
